@@ -87,6 +87,9 @@ if HAVE_GIO_UNIX
 GLib_2_0_gir_FILES += $(GLIB_INCLUDEDIR)/glib-unix.h
 endif
 
+# XXXJACK Should add this ony if the file exists:
+GLib_2_0_gir_FILES += $(GLIB_LIBDIR)/glib-2.0/include/$(host_cpu)/glibconfig.h
+
 BUILT_GIRSOURCES += GLib-2.0.gir
 
 GLib-2.0.gir: g-ir-scanner g-ir-compiler$(EXEEXT)
